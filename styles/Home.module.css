@@ -110,8 +110,12 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
+.nextjsLogo {
+  height: 1.5rem;
+}
+
+.tailwindLogo {
+  height: 0.9rem;
 }
 
 @media (max-width: 600px) {

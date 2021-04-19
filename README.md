@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Sentiment Analysis on Movie
 
-## Getting Started
+This is the frontend web application for our Sentiment Analysis on Movie Reviews project.
 
-First, run the development server:
+## Development
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The project was developed and tested on Node.js v14
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone this repository
+   ```
+   git clone https://github.com/teamfortyone/movie-review-sentinal-frontend.git
+   ```
+2. Install necessary dependencies
+   ```
+   npm install
+   ```
+3. Run development server
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+   ```
+   npm run dev
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Connecting to the lambda function
 
-## Learn More
+This repository acts as the web frontend to [this serverless lambda function](https://github.com/teamfortyone/sentiment-analysis-lambda).
 
-To learn more about Next.js, take a look at the following resources:
+Follow the Deployment steps there to host your own function.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Once you get the API endpoint URL, use it as an environment variable. For local development, create a `.env.local` file in the root of this project and set the variable:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    NEXT_PUBLIC_BASE_URL=<paste your API endpoint URL here>
 
-## Deploy on Vercel
+For environment variables in a Netlify deployment, follow [this tutorial](https://www.netlify.com/blog/2020/12/10/environment-variables-in-next.js-and-netlify/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Once you've set up your lambda function with API Gateway, you're ready to deploy the frontend that calls it.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/teamfortyone/movie-review-sentinal-frontend)
+
+## License
+
+MIT License

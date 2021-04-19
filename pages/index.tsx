@@ -7,8 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Sentiment Analysis on Movie Reviews</title>
       </Head>
       <header className="flex justify-center">
         <span className="p-4 text-3xl">

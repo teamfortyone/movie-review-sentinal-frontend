@@ -1,5 +1,10 @@
 export type ReviewSentimentResponse = {
-  sentiment?: "Positive" | "Negative";
-  score?: number;
+  positive?: number;
+  negative?: number;
   error?: string
+}
+
+export enum Sentiment {
+  POSITIVE = 'Positive',
+  NEGATIVE = 'Negative'
 }

@@ -6,5 +6,6 @@ export type ReviewSentimentResponse = {
 
 export enum Sentiment {
   POSITIVE = 'Positive',
-  NEGATIVE = 'Negative'
+  NEGATIVE = 'Negative',
+  NEUTRAL = 'Neutral',
 }

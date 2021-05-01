@@ -48,10 +48,8 @@ export default function Main(): JSX.Element {
       >
         Check sentiment
       </button>
-      {showLoader ? <SpinningLoader /> : null}
-      {sentimentResponse ? (
-        <SentimentResult response={sentimentResponse} />
-      ) : null}
+      {showLoader && <SpinningLoader />}
+      {sentimentResponse && <SentimentResult response={sentimentResponse} />}
     </div>
   );
 }
